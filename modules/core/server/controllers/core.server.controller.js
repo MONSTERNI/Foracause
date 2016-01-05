@@ -3,6 +3,10 @@
 /**
  * Render the main application page
  */
+ exports.jack = function () {
+  document.getElementById("normalize").style.height="150px";
+  
+};
 exports.renderIndex = function (req, res) {
   res.render('modules/core/server/views/index', {
     user: req.user || null

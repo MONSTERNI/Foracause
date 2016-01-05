@@ -1,9 +1,41 @@
+
 <section ng-controller="ArticlesController" ng-init="find()">
-  <div class="page-header">
-    <h1>Articles</h1>
+
+
+
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' >
+  <div class="page-header" >
+    <h1 style="color:white; font-family: 'Open Sans', sans-serif;" >Social Pillars</h1>
   </div>
   <div class="list-group">
+  <script type="text/javascript">
+  
+</script>
+
+  
+             <form name="articleForm" class="form-horizontal" ng-submit="create(articleForm.$valid)" novalidate>
+      <fieldset>
+      <textarea data-ng-model="problem" placeholder="POST HERE"  data-ng-model="problem" style="width:1050px; font-size:30px" id="normalize" ng-click='exp()'  ng-keydown="onKeyDown($event)"
+             ng-keyup="onKeyUp($event)"
+             ng-keypress="onKeyPress($event)"></textarea>
+          <input type="submit" class="btn btn-default">
+        </div>
+        <div ng-show="error" class="text-danger">
+          <strong ng-bind="error"></strong>
+        </div>
+      </fieldset>
+    </form>
+
+   
+  
+
+  <div type="button" class="btn btn-success" style="margin-left:870px ; margin-top:40px; width:150px;height:60px; padding-top:15px ;border-radius:50px; font-size:20px "  ui-sref="articles.create">Submit</div>
+
+
+  <div type="button" class="btn btn-success" style="margin-left:870px ; margin-top:40px; width:150px;height:60px; padding-top:15px ;border-radius:50px; font-size:20px "  ui-sref="articles.create">Feed</div>
     <a ng-repeat="article in articles" ui-sref="articles.view({articleId: article._id})" class="list-group-item">
+
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="article.created | date:'mediumDate'"></span>
@@ -15,7 +47,5 @@
       <p class="list-group-item-text" ng-bind="article.content"></p>
     </a>
   </div>
-  <div class="alert alert-warning text-center" ng-if="articles.$resolved && !articles.length">
-    No articles yet, why don't you <a ui-sref="articles.create">create one</a>?
-  </div>
+  <script type="text/javascript" src="exp.js" ></script>
 </section>

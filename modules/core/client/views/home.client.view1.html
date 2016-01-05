@@ -1,0 +1,20 @@
+
+<section ng-controller="HomeController">
+
+  <div class="row">
+  <div class="col-sm-4" ng-repeat="alert in alerts">
+    <div class="col-xs-2">
+      <h1>
+        <button type="button" class="btn btn-default" style="height:300px;width:300px" ui-sref="articles.list">
+              <img id="fade" ng-mouseover="myfunction(alert.idy)" ng-mouseleave="myfunc(alert.idy)" alt="MEAN.JS" class="img-responsive text-center" src={{alert.image}} />
+              <div type="text" id="{{alert.idy}}">{{alert.texty}}</div>
+        </button>
+        </h1>
+        </div>
+        <div class="row">
+          
+        </div>
+        </div>
+        </div>
+
+</section>
